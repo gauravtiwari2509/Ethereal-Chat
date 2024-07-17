@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+.input-buy {
+    width: 100%;
+    background: none;
+    border: 2px solid rgb(85, 85, 85);
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+    font-weight: 550;
+    text-align: center;
+    resize: none;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+
+  .scroller {
+    --animation-duration: 40s;
+    --animation-direction: normal;
+  }
+  
+  .animate-scroll {
+    animation: scroll var(--animation-duration) linear infinite;
+    animation-direction: var(--animation-direction);
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
